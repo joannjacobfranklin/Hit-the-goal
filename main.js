@@ -54,6 +54,7 @@ function my_keydown(e)
 		canvas.remove(ball_object);
 		document.getElementById("hd3").innerHTML = "You hit the goal!!";
 		document.getElementById("myCanvas").style.borderColor = "red";
+		document.getElementById("doItAgain").style.visibility = "visible";
 	}
 	
 	else{
@@ -128,5 +129,16 @@ function my_keydown(e)
 		}
 	}
 	
+}
+function load_again(){
+
+    canvas.remove(hole_object);	
+	load_img();
+    ball_y = 0;
+ball_x = 0;
+hole_y = 400;
+hole_x = 800;
+document.getElementById("hd3").innerHTML = "Hit the goal";
+		document.getElementById("myCanvas").style.borderColor = "white";
 }
 
